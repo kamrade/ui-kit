@@ -1,5 +1,10 @@
 @import "~assets/scss/bootstrap/_variables";
 
 .ui-icon-base {
-  display: inline-block;
+  display: block;
+
+  svg {
+    display: block;
+  }
+
 }

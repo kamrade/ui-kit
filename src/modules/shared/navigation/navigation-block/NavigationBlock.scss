@@ -1,8 +1,43 @@
 @import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+$hover-color: $white;
 
 .ui-navigation-block {
-  .ui-navigation-block-text {
-    display: inline-block;
-    margin-left: $spacer/2;
+  @include transition($transition-base);
+
+  .link-content {
+    display: flex;
+    padding: $spacer/2;
+
   }
+
+  .ui-navigation-block-text {
+    display: block;
+    margin-left: $spacer/2;
+    cursor: default;
+    margin-bottom: 0;
+    line-height: 20px;
+  }
+
+  .ui-navigation-block-icon {
+    display: block;
+  }
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  a, a:link, a:visited {
+    color: $gray-600;
+    @include transition($transition-base);
+    &:hover {
+      color: $gray-700;
+      text-decoration: none;
+    }
+    &.active {
+      color: $primary;
+    }
+  }
+
 }

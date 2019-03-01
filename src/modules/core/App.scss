@@ -1,0 +1,10 @@
+@import "~assets/scss/bootstrap/_variables";
+
+.App {
+  display: flex;
+
+  .workspace {
+    flex-grow: 5;
+    background-color: $white;
+  }
+}
