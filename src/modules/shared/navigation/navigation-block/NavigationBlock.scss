@@ -1,0 +1,8 @@
+@import "~assets/scss/bootstrap/_variables";
+
+.ui-navigation-block {
+  .ui-navigation-block-text {
+    display: inline-block;
+    margin-left: $spacer/2;
+  }
+}
