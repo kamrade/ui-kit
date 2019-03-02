@@ -2,10 +2,14 @@ import IconBase from './icon-base/IconBase';
 import Navigation from './navigation/Navigation';
 import NavigationBlock from './navigation/navigation-block/NavigationBlock';
 import Sidebar from './sidebar/Sidebar';
+import UIButton from './buttons/UIButton';
+import PaginationSlider from './pagination-slider/PaginationSlider';
 
 export {
   IconBase,
   Navigation,
   NavigationBlock,
-  Sidebar
+  Sidebar,
+  UIButton,
+  PaginationSlider
 };

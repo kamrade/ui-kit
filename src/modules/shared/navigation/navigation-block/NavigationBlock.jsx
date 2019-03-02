@@ -7,13 +7,9 @@ import { IconBase } from 'modules/shared';
 const NavigationBlock = (props) => (
 
   <div className="ui-navigation-block">
-    <NavLink to={props.path}>
+    <NavLink className="d-block" to={props.path}>
       <div className="link-content">
-        <div className="ui-navigation-block-icon">
-          <IconBase
-            iconName={props.iconName}
-          />
-        </div>
+        <div className="ui-navigation-block-icon"> <IconBase iconName={props.iconName} /> </div>
         <p className="ui-navigation-block-text">{props.text}</p>
       </div>
     </NavLink>
@@ -24,6 +20,7 @@ const NavigationBlock = (props) => (
 NavigationBlock.propTypes = {
   iconName: PropTypes.string,
   text: PropTypes.string,
+  path: PropTypes.string,
 }
 
 export default NavigationBlock;

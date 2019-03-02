@@ -4,14 +4,15 @@ import './IconBase.scss';
 
 import * as icons from './icons';
 
-const IconBase = (props) => (
-  <span className="ui-icon-base">
-    {icons[props.iconName || 'all_transactions']}
+const IconBase = ({iconName, color}) => (
+  <span className={`ui-icon-base ${color}`}>
+    {icons[iconName || 'all_transactions']}
   </span>
 );
 
 IconBase.propTypes = {
   iconName: PropTypes.string,
+  color: PropTypes.string,
 }
 
 export default IconBase;

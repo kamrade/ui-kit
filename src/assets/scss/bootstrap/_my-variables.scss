@@ -1,0 +1,57 @@
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$font-family-base:            $font-family-sans-serif;
+// $font-family-sans-serif:      'Cartograph Mono CF', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//
+// $font-family-monospace:       'Cartograph Mono CF', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+//
+// $font-family-base:            $font-family-sans-serif;
+
+
+$gray-100: #F0F5FA;
+$gray-200: #E2E6EF;
+$gray-300: #C4CBD9;
+$gray-400: #ABB3C5;
+$gray-500: #8D96AA;
+$gray-600: #6B758A;
+$gray-700: #4E5565;
+$gray-800: #373C46;
+$gray-900: #1E222A;
+
+$body-bg: $gray-100;
+
+$spacer: 20px;
+$spacers: ();
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 3),
+    7: ($spacer * 4),
+    8: ($spacer * 5),
+  ),
+  $spacers
+);
+
+$paragraph-margin-bottom: $spacer/2;
+
+$grid-gutter-width: $spacer * 1.5;
+
+// $font-size-base: 1rem;
+$font-size-base: 0.875rem;
+$font-size-lg:   $font-size-base * 1.25;
+// $font-size-sm:   $font-size-base * .75;
+$font-size-sm: 0.75rem;
+
+$input-btn-padding-y:         .5rem;
+$input-btn-padding-x:         .875rem;
+$input-btn-focus-width:       .125rem;
+
+$hover-factor: 3%;

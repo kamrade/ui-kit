@@ -4,7 +4,7 @@ const nav = [{
   title: 'Sandbox'
 }, {
   path: '/atoms',
-  icon: 'summary',
+  icon: 'turnovers_flow',
   title: 'Atoms'
 }]
 

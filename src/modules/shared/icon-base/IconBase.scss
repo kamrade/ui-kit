@@ -1,10 +1,16 @@
 @import "~assets/scss/bootstrap/_variables";
 
 .ui-icon-base {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 
   svg {
-    display: block;
+    vertical-align: top;
   }
 
+  &.inverted {
+    svg path {
+      stroke: $white;
+    }
+  }
 }

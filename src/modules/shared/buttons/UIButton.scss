@@ -1,0 +1,43 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.ui-button {
+  display: inline-block;
+
+  .btn-content {
+    display: inline-block;
+    .btn-text {
+      display: inline-block;
+    }
+    .btn-icon {
+      display: inline-block;
+      &.btn-icon-left {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .btn {
+    @include transition($transition-base);
+    cursor: default;
+
+    &.btn-light {
+      background-color: $gray-100;
+      border-color: $gray-100;
+      &:hover {
+        background-color: darken($gray-100, $hover-factor);
+        border-color: darken($gray-100, $hover-factor);
+      }
+    }
+
+    &.btn-flat {
+      background-color: transparent;
+      border-color: transparent;
+      &:hover {
+        background-color: $gray-100;
+        border-color: $gray-100;
+      }
+    }
+  }
+
+}
