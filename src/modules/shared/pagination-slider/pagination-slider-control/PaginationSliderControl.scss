@@ -6,28 +6,5 @@
   height: 39px;
   background-color: $gray-200;
   border-radius: 2px;
-  max-width: 100px;
-  cursor: pointer;
-  @include transition($transition-base);
-  &:hover {
-    background-color: darken($gray-200, $hover-factor);
-    .resizer {
-      opacity: .5;
-    }
-  }
-
-  .resizer {
-    position: absolute;
-    top: 9px;
-    cursor: ew-resize;
-    opacity: 0;
-    @include transition($transition-base);
-
-    &.resizer-left {
-      left: 2px;
-    }
-    &.resizer-right {
-      right: 2px;
-    }
-  }
+  width: 100%;
 }

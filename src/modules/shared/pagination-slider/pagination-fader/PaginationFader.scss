@@ -1,0 +1,60 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+$dot-size: 2px;
+$dot-space: 3px;
+
+.ui-pagination-fader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 39px;
+  background-color: $gray-300;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &.over-fade {
+    background:
+      linear-gradient(90deg, $gray-200 ($dot-space - $dot-size), transparent 1%) center,
+      linear-gradient($gray-200 ($dot-space - $dot-size), transparent 1%) center,
+      $gray-300;
+    background-size: $dot-space $dot-space;
+
+    &:hover {
+      background:
+        linear-gradient(90deg, $gray-200 ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient($gray-200 ($dot-space - $dot-size), transparent 1%) center,
+        $gray-300;
+      background-size: $dot-space $dot-space;
+    }
+  }
+
+  &:hover {
+    background-color: darken($gray-300, $hover-factor);
+    .resizer {
+      opacity: .3;
+    }
+  }
+  .resizer {
+    position: absolute;
+    top: 9px;
+    cursor: ew-resize;
+    opacity: 0;
+    @include transition($transition-base);
+
+    &.resizer-left {
+      left: 5px;
+    }
+    &.resizer-right {
+      right: 5px;
+    }
+  }
+
+  .counter {
+    font-size: 10px;
+    padding-top: 9px;
+    padding-left: 20px;
+  }
+
+
+}

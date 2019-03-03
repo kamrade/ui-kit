@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {PropTypes} from 'prop-types'
 import './PaginationSliderControl.scss';
+import PaginationFader from '../pagination-fader/PaginationFader';
 
-import {IconBase} from 'modules/shared';
+class PaginationSliderControl extends Component {
 
-const PaginationSliderControl = () => (
-  <div className="ui-pagination-slider-control">
-    <div className="resizer resizer-left">
-      <IconBase iconName='draggable'/>
-    </div>
-    <div className="resizer resizer-right">
-      <IconBase iconName='draggable'/>
-    </div>
-  </div>
-);
+  constructor(props) {
+    super(props);
+    this.state = {
+      sliderControlWidth: 0
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      let width = this.sliderControl.offsetWidth;
+      this.setState({
+        sliderControlWidth: width
+      })
+    }, 1000);
+  }
+
+  render() {
+    return (
+      <div ref={el => this.sliderControl = el} className="ui-pagination-slider-control">
+
+        <PaginationFader
+          maxWidth={this.state.sliderControlWidth}
+          faderPosition={this.props.faderPosition}
+          faderWidth={this.props.faderWidth}
+          faderMinWidth={this.props.faderMinWidth}
+          faderMaxWidth={this.props.faderMaxWidth}
+          moveFader={this.props.moveFader}
+        />
+
+      </div>
+    );
+  }
+
+}
+
+PaginationSliderControl.propTypes = {
+  faderPosition: PropTypes.number,
+  faderWidth: PropTypes.number,
+  faderMinWidth: PropTypes.number,
+  faderMaxWidth: PropTypes.number,
+  moveFader: PropTypes.func
+}
 
 export default PaginationSliderControl;
