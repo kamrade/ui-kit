@@ -31,7 +31,9 @@ class PaginationSliderControl extends Component {
           faderWidth={this.props.faderWidth}
           faderMinWidth={this.props.faderMinWidth}
           faderMaxWidth={this.props.faderMaxWidth}
+
           moveFader={this.props.moveFader}
+          resizeFader={this.props.resizeFader}
         />
 
       </div>
@@ -45,7 +47,9 @@ PaginationSliderControl.propTypes = {
   faderWidth: PropTypes.number,
   faderMinWidth: PropTypes.number,
   faderMaxWidth: PropTypes.number,
-  moveFader: PropTypes.func
+
+  moveFader: PropTypes.func,
+  resizeFader: PropTypes.func,
 }
 
 export default PaginationSliderControl;

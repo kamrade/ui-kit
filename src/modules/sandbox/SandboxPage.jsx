@@ -44,7 +44,7 @@ const SandboxPage = () => (
     </div>
 
     <div className="p-3">
-
+      <h3>Pagination Slider</h3>
       <PaginationSlider></PaginationSlider>
     </div>
 

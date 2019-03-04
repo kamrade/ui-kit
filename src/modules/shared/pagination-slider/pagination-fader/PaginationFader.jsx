@@ -13,9 +13,11 @@ class PaginationFader extends Component {
 
       startPosLeft:  0,
       distanceLeft:  0,
+      isResizingLeft: false,
 
       startPosRight: 0,
       distanceRight: 0,
+      isResizingRight: false,
 
       isResizing: false,
       isResizeOverflow: false,
@@ -52,6 +54,7 @@ class PaginationFader extends Component {
       startResizeFaderWidth: this.state.faderWidth,
       faderPositionBeforeMove: this.state.faderPosition,
       isResizing: true,
+      isResizingRight: true,
       isResizeOverflow: false
     });
 
@@ -64,19 +67,57 @@ class PaginationFader extends Component {
   }
 
   faderResizingRight(event) {
+    const currentPos = event.clientX;
+    const offsetRight = currentPos - this.state.startPosRight;
+    let newFaderWidth = 0;
+    let resizeOverflow = false;
+
+    newFaderWidth = this.state.startResizeFaderWidth + offsetRight;
+
+    if (newFaderWidth > this.props.faderMaxWidth) {
+      // too big
+      newFaderWidth = this.props.faderMaxWidth;
+      resizeOverflow = true;
+    } else if (newFaderWidth < this.props.faderMinWidth) {
+      // too small
+      newFaderWidth = this.props.faderMinWidth;
+      resizeOverflow = true;
+    } else {
+
+    }
+
+    const overlay = this.state.faderPosition + this.state.faderWidth + offsetRight;
+    if (overlay > this.props.maxWidth) {
+      if ((this.props.maxWidth - this.state.faderPosition) < this.props.faderMaxWidth) {
+        newFaderWidth = this.props.maxWidth - this.state.faderPosition;
+      } else {
+        newFaderWidth = this.state.faderWidth;
+      }
+      resizeOverflow = true;
+    }
+
+    this.setState({
+      faderWidth: newFaderWidth,
+      isResizeOverflow: resizeOverflow
+    });
+
 
   }
 
   faderResizeRightRelease(event) {
-    let currentPos = event.clientX;
+    // let currentPos = event.clientX;
     this.setState({
       isResizing: false,
+      isResizingRight: false,
       isResizeOverflow: false
     });
+    this.props.resizeFader(this.state.faderWidth, this.state.faderPosition);
     document.removeEventListener('mousemove', this.faderResizingRight);
     document.removeEventListener('mouseup', this.faderResizeRightRelease);
 
   }
+
+  // SCALING FADER RIGHT <<<
 
   // SCALING FADER LEFT >>>
 
@@ -86,7 +127,8 @@ class PaginationFader extends Component {
       startPosLeft: event.clientX,
       startResizeFaderWidth: this.state.faderWidth,
       faderPositionBeforeMove: this.state.faderPosition,
-      isResizing: true
+      isResizing: true,
+      isResizingLeft: true
     });
 
     event.preventDefault();
@@ -121,6 +163,9 @@ class PaginationFader extends Component {
         newFaderPosition = this.state.faderPosition;
         resizeOverflow = true;
       }
+      if ((this.state.faderWidth + this.state.faderPosition) < this.props.faderMaxWidth) {
+        newFaderPosition = 0;
+      }
       newFaderWidth = this.state.faderWidth;
     }
 
@@ -138,8 +183,12 @@ class PaginationFader extends Component {
     this.setState({
       distanceLeft: currentPos - this.state.startPosLeft,
       isResizing: false,
+      isResizingLeft: false,
       isResizeOverflow: false
     });
+
+    // this.props.moveFader(this.state.faderPosition);
+    this.props.resizeFader(this.state.faderWidth, this.state.faderPosition);
 
     document.removeEventListener('mousemove', this.faderResizingLeft);
     document.removeEventListener('mouseup', this.faderResizeLeftRelease);
@@ -186,7 +235,7 @@ class PaginationFader extends Component {
       faderPositionBeforeMove: this.state.faderPosition,
       isMoving: false
     });
-    this.props.moveFader(this.state.faderPosition)
+    this.props.moveFader(this.state.faderPosition);
     document.removeEventListener('mousemove', this.faderMoving);
     document.removeEventListener('mouseup', this.faderMoveRelease);
   }
@@ -199,10 +248,15 @@ class PaginationFader extends Component {
         style={{
           left: this.state.faderPosition,
           width: this.state.faderWidth,
-          opacity: this.state.isMoving || this.state.isResizing ? '.4' : '1'
+          opacity: this.state.isMoving || this.state.isResizing ? '.8' : '1'
         }}
         onMouseDown={this.faderMoveStart}
-        className={`ui-pagination-fader ${this.state.isResizeOverflow ? 'over-fade' : ''}`}>
+        className={`
+          ui-pagination-fader
+          ${this.state.isResizeOverflow ? 'over-fade' : ''}
+          ${this.state.isResizingLeft ? 'resizing-left' : ''}
+          ${this.state.isResizingRight ? 'resizing-right' : ''}
+        `}>
 
         <div onMouseDown={this.faderResizeLeftStart} className="resizer resizer-left">
           <IconBase iconName='draggable'/>
@@ -226,7 +280,9 @@ PaginationFader.propTypes = {
   faderMinWidth: PropTypes.number,
   faderMaxWidth: PropTypes.number,
   maxWidth: PropTypes.number,
-  moveFader: PropTypes.func
+
+  moveFader: PropTypes.func,
+  resizeFader: PropTypes.func,
 }
 
 export default PaginationFader;

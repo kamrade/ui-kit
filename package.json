@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "surge-deploy": "npm run build && surge ./build --domain cp-prototyping.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -14,11 +14,20 @@ class PaginationSlider extends Component {
       faderMinWidth: 100,
       faderMaxWidth: 300
     }
-    this.moveFader = this.moveFader.bind(this);
+
+    this.moveFader   = this.moveFader.bind(this);
+    this.resizeFader = this.resizeFader.bind(this);
   }
 
   moveFader(newPosition) {
     this.setState({faderPosition: newPosition});
+  }
+
+  resizeFader(newWidth, newPosition) {
+    this.setState({
+      faderWidth: newWidth,
+      faderPosition: newPosition,
+    });
   }
 
   render() {
@@ -35,7 +44,8 @@ class PaginationSlider extends Component {
         </div>
 
         <div className="indicators">
-          {this.state.faderPosition}
+          <p className="m-0">pos: {this.state.faderPosition},</p>
+          <p className="m-0">width: {this.state.faderWidth},</p>
         </div>
 
         <PaginationSliderControl
@@ -43,7 +53,9 @@ class PaginationSlider extends Component {
           faderPosition={this.state.faderPosition}
           faderWidth={this.state.faderWidth}
           faderMaxWidth={this.state.faderMaxWidth}
+
           moveFader={this.moveFader}
+          resizeFader={this.resizeFader}
         />
 
       </div>

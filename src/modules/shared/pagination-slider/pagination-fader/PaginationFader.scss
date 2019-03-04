@@ -13,6 +13,24 @@ $dot-space: 3px;
   border-radius: 2px;
   cursor: pointer;
 
+  &.resizing-left {
+    .resizer.resizer-right {
+      opacity: 0;
+    }
+    .resizer.resizer-left {
+      opacity: 1;
+    }
+  }
+
+  &.resizing-right {
+    .resizer.resizer-left {
+      opacity: 0;
+    }
+    .resizer.resizer-right {
+      opacity: 1;
+    }
+  }
+
   &.over-fade {
     background:
       linear-gradient(90deg, $gray-200 ($dot-space - $dot-size), transparent 1%) center,
