@@ -1,1 +1,10 @@
 @import "~assets/scss/bootstrap/_variables";
+
+.ui-navigation {
+  .nav-group-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray-600;
+  }
+}

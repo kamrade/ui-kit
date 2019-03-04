@@ -2,8 +2,8 @@ $cartographMonoFontBaseUrl: "/assets/fonts/cartograph-mono/" !default;
 
 @font-face {
     font-family: 'Cartograph Mono CF';
-    src: url('#{$cartographMonoFontBaseUrl}CartographMonoCF-Regular.woff2') format('woff2'),
-        url('#{$cartographMonoFontBaseUrl}CartographMonoCF-Regular.woff') format('woff');
+    src: url('#{$cartographMonoFontBaseUrl}CartographMonoCF-Medium.woff2') format('woff2'),
+        url('#{$cartographMonoFontBaseUrl}CartographMonoCF-Medium.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }

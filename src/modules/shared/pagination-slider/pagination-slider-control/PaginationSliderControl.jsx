@@ -5,6 +5,8 @@ import PaginationFader from '../pagination-fader/PaginationFader';
 
 class PaginationSliderControl extends Component {
 
+  _isMounted = true;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +15,7 @@ class PaginationSliderControl extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     setTimeout(() => {
       let width = this.sliderControl.offsetWidth;
       this.setState({
@@ -21,9 +24,13 @@ class PaginationSliderControl extends Component {
     }, 1000);
   }
 
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   render() {
     return (
-      <div ref={el => this.sliderControl = el} className="ui-pagination-slider-control">
+      <div ref={el => this.sliderControl = this._isMounted ? el : null} className="ui-pagination-slider-control">
 
         <PaginationFader
           maxWidth={this.state.sliderControlWidth}

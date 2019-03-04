@@ -4,12 +4,13 @@ import {UIButton, IconBase, PaginationSlider} from 'modules/shared';
 
 const SandboxPage = () => (
   <div>
-    <div className="p-3">
+    <div className="px-5 py-3">
       <h1 className="mb-5">Sandbox</h1>
+      <hr/>
       <h3>Buttons</h3>
     </div>
 
-    <div className="p-3">
+    <div className="px-5 py-3">
 
       <UIButton theme='primary'>
         <span className="btn-icon btn-icon-left"><IconBase iconName='download' color='inverted'/></span>
@@ -27,7 +28,7 @@ const SandboxPage = () => (
       </UIButton>{' '}
     </div>
 
-    <div className="p-3">
+    <div className="px-5 py-3">
 
       <UIButton theme='light' size='sm'>
         <span className="btn-text">Small Button</span>
@@ -35,7 +36,7 @@ const SandboxPage = () => (
 
     </div>
 
-    <div className="p-3">
+    <div className="px-5 py-3">
 
       <UIButton theme='light' size='lg'>
         <span className="btn-text">Large Button</span>
@@ -43,7 +44,7 @@ const SandboxPage = () => (
 
     </div>
 
-    <div className="p-3">
+    <div className="px-5 py-3">
       <h3>Pagination Slider</h3>
       <PaginationSlider></PaginationSlider>
     </div>

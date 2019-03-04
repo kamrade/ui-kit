@@ -9,15 +9,44 @@ const Navigation = (props) => (
 
     {
       props.navElements.map((navItem, key) => {
-        return (
-          <div key={key}>
-            <NavigationBlock
-              iconName={navItem.icon}
-              text={navItem.title}
-              path={navItem.path}
-            />
-          </div>
-        )
+
+        if (navItem.type === 'link') {
+          return (
+            <div key={key}>
+              <NavigationBlock
+                iconName={navItem.icon}
+                text={navItem.title}
+                path={navItem.path}
+              />
+            </div>
+          );
+        } else if (navItem.type === 'group') {
+
+          return (
+            <div key={key} className="nav-group">
+              <p className="nav-group-title">{navItem.title}</p>
+              <div className="nav-group-items">
+                {navItem.children.map((navChild, k) => {
+                  return (
+                    <div key={k}>
+                      <NavigationBlock
+                        iconName={navChild.icon}
+                        text={navChild.title}
+                        path={navChild.path}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        } else {
+          return null;
+        }
+
+
+
+
       })
     }
   </div>
