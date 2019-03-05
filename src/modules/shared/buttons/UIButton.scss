@@ -1,18 +1,43 @@
 @import "~assets/scss/bootstrap/_variables";
 @import "~assets/scss/bootstrap/_mixins";
 
+.btn {
+  padding: 4px 10px 3px;
+
+  &.btn-sm {
+    line-height: 1rem;
+    padding: 1px 5px;
+  }
+
+  &.btn-lg {
+    padding: 9px 15px 8px;
+  }
+}
+
 .ui-button {
   display: inline-block;
+  vertical-align: top;
+  line-height: 0;
 
   .btn-content {
     display: inline-block;
     .btn-text {
       display: inline-block;
     }
+
     .btn-icon {
       display: inline-block;
+      vertical-align: top;
       &.btn-icon-left {
         margin-right: 8px;
+      }
+      &.btn-icon-sm {
+        &.btn-icon-left {
+          margin-right: 4px;
+        }
+      }
+      &.btn-icon-only {
+        margin: 0;
       }
     }
   }

@@ -35,12 +35,12 @@ class PaginationSlider extends Component {
       <div className="ui-pagination-slider">
 
         <div className="button-controls">
-          <UIButton theme='light'>
-            <span className="btn-icon"><IconBase iconName='chevron_left'/></span>
-          </UIButton>{' '}
-          <UIButton theme='light'>
-            <span className="btn-icon"><IconBase iconName='chevron_right'/></span>
-          </UIButton>{' '}
+          <UIButton theme='light' size='sm'>
+            <span className="btn-icon"><IconBase iconName='chevron_left_sm'/></span>
+          </UIButton>
+          <UIButton theme='light' size='sm'>
+            <span className="btn-icon"><IconBase iconName='chevron_right_sm'/></span>
+          </UIButton>
         </div>
 
         <div className="indicators">

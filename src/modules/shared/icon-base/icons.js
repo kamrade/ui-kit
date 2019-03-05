@@ -40,8 +40,15 @@ export const download = (
   <path d="M5.77783 8.61108L10.5001 13.3333L15.2223 8.61108" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   <path d="M10.5 13.3333V2" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
-
 )
+
+export const download_sm = (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M4.40234 6.56091L8.00023 10.1588L11.5981 6.56091" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M8 10L8 2" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 export const chevron_right = (
   <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,9 +56,21 @@ export const chevron_right = (
   </svg>
 );
 
+export const chevron_right_sm = (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5.5 13L10.5 7.99999L5.5 3" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 export const chevron_left = (
   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M13.5 17L7 10.5L13.5 4" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const chevron_left_sm = (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 13L5.5 8L10.5 3" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 

@@ -8,7 +8,7 @@ $dot-space: 3px;
   position: absolute;
   top: 0;
   left: 0;
-  height: 39px;
+  height: 20px;
   background-color: $gray-300;
   border-radius: 2px;
   cursor: pointer;
@@ -55,16 +55,16 @@ $dot-space: 3px;
   }
   .resizer {
     position: absolute;
-    top: 9px;
+    top: 0px;
     cursor: ew-resize;
     opacity: 0;
     @include transition($transition-base);
 
     &.resizer-left {
-      left: 5px;
+      left: 0px;
     }
     &.resizer-right {
-      right: 5px;
+      right: 0px;
     }
   }
 
