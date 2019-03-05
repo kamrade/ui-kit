@@ -4,12 +4,12 @@ const nav = [{
   collapse: false,
   children: [{
     type: 'link',
-    path: '/sandbox',
+    path: '/orders/sandbox',
     icon: 'orders_all_transactions',
     title: 'All Transactions'
   }, {
     type: 'link',
-    path: '/atoms',
+    path: '/orders/atoms',
     icon: 'orders_payments',
     title: 'Payments'
   }, {

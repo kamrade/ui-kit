@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import {Sidebar, Header} from 'modules/shared';
+import {Header} from 'modules/shared';
 import './App.scss';
 
-import SandboxPage from 'modules/sandbox/SandboxPage';
-import AtomsPage from 'modules/atoms/AtomsPage';
-
-import navElements from './const/nav';
+import MerchantAccountPage from 'modules/ma/MerchantAccount';
+import OrdersPage from 'modules/orders/Orders';
 
 class App extends Component {
   render() {
@@ -14,20 +12,14 @@ class App extends Component {
 
         <div className="App">
           <Header />
-          <div className="current-app">
-            <Sidebar navElements={navElements} />
 
-            <div className="workspace">
-
-              <Switch>
-                <Route path="/sandbox" component={SandboxPage}/>
-                <Route path="/atoms" component={AtomsPage} />
-                <Route render={props => <Redirect to="/sandbox" />} />
-              </Switch>
-
-            </div>
+          <div className="current-application">
+            <Switch>
+              <Route path='/ma' component={MerchantAccountPage} />
+              <Route path='/orders' component={OrdersPage} />
+              <Route render={props => <Redirect to="/orders" />} />
+            </Switch>
           </div>
-
         </div>
 
     );

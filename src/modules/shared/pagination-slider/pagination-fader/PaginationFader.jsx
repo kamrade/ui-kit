@@ -9,16 +9,24 @@ class PaginationFader extends Component {
   constructor(props) {
     super(props);
 
+    this.$fader = React.createRef();
+
     this.state = {
 
+      // base
+      faderContainerWidth: 0,
+
+      // resize left
       startPosLeft:  0,
       distanceLeft:  0,
       isResizingLeft: false,
 
+      // resize right
       startPosRight: 0,
       distanceRight: 0,
       isResizingRight: false,
 
+      // resizing
       isResizing: false,
       isResizeOverflow: false,
 
@@ -47,9 +55,14 @@ class PaginationFader extends Component {
 
   }
 
+  getFaderContainerWidth() {
+    return this.$fader.current.parentNode.offsetWidth;
+  }
+
   // SCALING FADER RIGHT >>>
   faderResizeRightStart(event) {
     this.setState({
+      faderContainerWidth: this.getFaderContainerWidth(),
       startPosRight: event.clientX,
       startResizeFaderWidth: this.state.faderWidth,
       faderPositionBeforeMove: this.state.faderPosition,
@@ -87,9 +100,9 @@ class PaginationFader extends Component {
     }
 
     const overlay = this.state.faderPosition + this.state.faderWidth + offsetRight;
-    if (overlay > this.props.maxWidth) {
-      if ((this.props.maxWidth - this.state.faderPosition) < this.props.faderMaxWidth) {
-        newFaderWidth = this.props.maxWidth - this.state.faderPosition;
+    if (overlay > this.state.faderContainerWidth) {
+      if ((this.state.faderContainerWidth - this.state.faderPosition) < this.props.faderMaxWidth) {
+        newFaderWidth = this.state.faderContainerWidth - this.state.faderPosition;
       } else {
         newFaderWidth = this.state.faderWidth;
       }
@@ -124,6 +137,7 @@ class PaginationFader extends Component {
   faderResizeLeftStart(event) {
 
     this.setState({
+      faderContainerWidth: this.getFaderContainerWidth(),
       startPosLeft: event.clientX,
       startResizeFaderWidth: this.state.faderWidth,
       faderPositionBeforeMove: this.state.faderPosition,
@@ -202,6 +216,7 @@ class PaginationFader extends Component {
     const startPos = event.clientX;
 
     this.setState({
+      faderContainerWidth: this.getFaderContainerWidth(),
       startMoveFaderPosition: startPos,
       faderPositionBeforeMove: this.state.faderPosition,
       isMoving: true
@@ -220,8 +235,8 @@ class PaginationFader extends Component {
 
     if (faderPos < 0) {
       faderPos = 0;
-    } else if  ((faderPos + this.state.faderWidth) > this.props.maxWidth) {
-      faderPos = this.props.maxWidth - this.state.faderWidth;
+    } else if  ((faderPos + this.state.faderWidth) > this.state.faderContainerWidth) {
+      faderPos = this.state.faderContainerWidth - this.state.faderWidth;
     }
 
     this.setState({
@@ -251,6 +266,7 @@ class PaginationFader extends Component {
           opacity: this.state.isMoving || this.state.isResizing ? '.8' : '1'
         }}
         onMouseDown={this.faderMoveStart}
+        ref={this.$fader}
         className={`
           ui-pagination-fader
           ${this.state.isMoving ? 'is-moving' : ''}
@@ -280,7 +296,6 @@ PaginationFader.propTypes = {
   faderPosition: PropTypes.number,
   faderMinWidth: PropTypes.number,
   faderMaxWidth: PropTypes.number,
-  maxWidth: PropTypes.number,
 
   moveFader: PropTypes.func,
   resizeFader: PropTypes.func,

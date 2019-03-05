@@ -9,7 +9,6 @@ class PaginationSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      blockWidth: 0,
       faderPosition: 0,
       faderWidth: 200,
       faderMinWidth: 50,
@@ -18,14 +17,8 @@ class PaginationSlider extends Component {
 
     this.moveFader   = this.moveFader.bind(this);
     this.resizeFader = this.resizeFader.bind(this);
-    this.setBlockWidth = this.setBlockWidth.bind(this);
   }
 
-  setBlockWidth(w) {
-    this.setState({
-      blockWidth: w
-    })
-  }
 
   moveFader(newPosition) {
     this.setState({faderPosition: newPosition});
@@ -60,7 +53,6 @@ class PaginationSlider extends Component {
 
             moveFader={this.moveFader}
             resizeFader={this.resizeFader}
-            setBlockWidth={this.setBlockWidth}
           />
 
         </div>
