@@ -1,0 +1,12 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+
+.page-ma {
+  display: flex;
+
+  .workspace {
+    flex-grow: 5;
+    background-color: $white;
+  }
+}
