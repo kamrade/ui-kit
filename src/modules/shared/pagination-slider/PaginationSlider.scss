@@ -6,8 +6,8 @@
   padding: 5px;
   background-color: $gray-100;
   border-radius: 4px;
-  padding-left: 60px;
-  padding-right: 100px;
+  padding-left: 80px;
+  margin-bottom: $spacer;
 
   .button-controls {
     position: absolute;
@@ -17,10 +17,6 @@
   }
 
   .indicators {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    text-align: right;
     font-size: 10px;
     line-height: 10px;
   }

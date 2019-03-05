@@ -9,7 +9,7 @@ $hover-color: darken($gray-100, 2%);
   .link-content {
     display: flex;
     padding: $spacer/2;
-
+    align-items: baseline;
   }
 
   .ui-navigation-block-text {
@@ -35,8 +35,14 @@ $hover-color: darken($gray-100, 2%);
       text-decoration: none;
     }
     &.active {
-      color: $primary;
+      .ui-navigation-block-text {
+        color: $primary;
+      }
     }
+  }
+
+  .ui-navigation-block-text {
+    color: $gray-900;
   }
 
 }

@@ -13,6 +13,14 @@ $dot-space: 3px;
   border-radius: 2px;
   cursor: pointer;
 
+  &.is-moving {
+    .resizer {
+      &.resizer-right, &.resizer-left {
+        opacity: 0;
+      }
+    }
+  }
+
   &.resizing-left {
     .resizer.resizer-right {
       opacity: 0;
@@ -53,6 +61,7 @@ $dot-space: 3px;
       opacity: .3;
     }
   }
+
   .resizer {
     position: absolute;
     top: 0px;
@@ -61,10 +70,10 @@ $dot-space: 3px;
     @include transition($transition-base);
 
     &.resizer-left {
-      left: 0px;
+      left: -15px;
     }
     &.resizer-right {
-      right: 0px;
+      right: -15px;
     }
   }
 

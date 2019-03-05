@@ -253,6 +253,7 @@ class PaginationFader extends Component {
         onMouseDown={this.faderMoveStart}
         className={`
           ui-pagination-fader
+          ${this.state.isMoving ? 'is-moving' : ''}
           ${this.state.isResizeOverflow ? 'over-fade' : ''}
           ${this.state.isResizingLeft ? 'resizing-left' : ''}
           ${this.state.isResizingRight ? 'resizing-right' : ''}

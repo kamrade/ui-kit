@@ -1,2 +1,7 @@
 @import "~assets/scss/bootstrap/_variables";
 @import "~assets/scss/bootstrap/_mixins";
+
+.flex-container {
+  display: flex;
+  align-items: baseline;
+}

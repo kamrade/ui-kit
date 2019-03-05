@@ -18,6 +18,7 @@ class PaginationSliderControl extends Component {
     this._isMounted = true;
     setTimeout(() => {
       let width = this.sliderControl.offsetWidth;
+      this.props.setBlockWidth(width);
       this.setState({
         sliderControlWidth: width
       })
@@ -30,7 +31,7 @@ class PaginationSliderControl extends Component {
 
   render() {
     return (
-      <div ref={el => this.sliderControl = this._isMounted ? el : null} className="ui-pagination-slider-control">
+      <div ref={el => this.sliderControl = el} className="ui-pagination-slider-control">
 
         <PaginationFader
           maxWidth={this.state.sliderControlWidth}
@@ -57,6 +58,7 @@ PaginationSliderControl.propTypes = {
 
   moveFader: PropTypes.func,
   resizeFader: PropTypes.func,
+  setBlockWidth: PropTypes.func,
 }
 
 export default PaginationSliderControl;

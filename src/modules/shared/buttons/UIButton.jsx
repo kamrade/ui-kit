@@ -5,10 +5,17 @@ import './UIButton.scss';
 class UIButton extends Component {
 
   render() {
-    const {theme, size} = this.props;
+    const {theme, size, addClass} = this.props;
     return (
       <div className="ui-button">
-        <button className={`btn btn-${theme} ${size ? 'btn-' + size : ''}`}>
+
+        <button className={`
+          btn
+          btn-${theme}
+          ${size ? 'btn-' + size : ''}
+          ${addClass ? addClass : ''}
+        `}>
+
           <span className="btn-content">{this.props.children}</span>
         </button>
       </div>
@@ -19,7 +26,8 @@ class UIButton extends Component {
 
 UIButton.propTypes = {
   theme: PropTypes.string,
-  size: PropTypes.string
+  size: PropTypes.string,
+  addClass: PropTypes.string,
 }
 
 export default UIButton;

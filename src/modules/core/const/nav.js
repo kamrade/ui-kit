@@ -1,17 +1,42 @@
 const nav = [{
   type: 'group',
-  title: 'Basic things',
+  title: 'Cards and alts',
   collapse: false,
   children: [{
     type: 'link',
     path: '/sandbox',
-    icon: 'summary',
-    title: 'Sandbox'
+    icon: 'orders_all_transactions',
+    title: 'All Transactions'
   }, {
     type: 'link',
     path: '/atoms',
-    icon: 'turnovers_flow',
-    title: 'Atoms'
+    icon: 'orders_payments',
+    title: 'Payments'
+  }, {
+    type: 'link',
+    path: '/refunds',
+    icon: 'orders_refunds',
+    title: 'Refunds'
+  }, {
+    type: 'link',
+    path: '/payouts',
+    icon: 'orders_payouts',
+    title: 'Payouts'
+  }]
+}, {
+  type: 'group',
+  title: 'Crypto-currencies',
+  collapse: false,
+  children: [{
+    type: 'link',
+    path: '/crypto-all',
+    icon: 'orders_all_transactions',
+    title: 'All transactions'
+  }, {
+    type: 'link',
+    path: '/crypto-payments',
+    icon: 'orders_payments',
+    title: 'Payments'
   }]
 }]
 

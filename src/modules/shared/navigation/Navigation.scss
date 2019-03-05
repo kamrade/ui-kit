@@ -1,10 +1,19 @@
 @import "~assets/scss/bootstrap/_variables";
 
 .ui-navigation {
+  font-family: 'Montserrat';
+
+  .nav-group {
+    margin-bottom: 40px;
+  }
+
   .nav-group-title {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $gray-600;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $gray-200;
   }
+
 }
