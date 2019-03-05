@@ -9,11 +9,11 @@ class Header extends Component {
     return (
       <div className='ui-header'>
 
-        <NavLink className='header-link' to='/ma/sandbox'>
+        <NavLink className='header-link' to='/ma'>
           <span className='app-title'>Merchant account</span>
         </NavLink>
 
-        <NavLink className='header-link' to='/orders/all-transactions'>
+        <NavLink className='header-link' to='/orders'>
           <span className='app-title'>Orders</span>
         </NavLink>
 

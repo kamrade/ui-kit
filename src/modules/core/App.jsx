@@ -14,10 +14,11 @@ class App extends Component {
           <Header />
 
           <div className="current-application">
+            <Route exact path="/" render={props => <Redirect to="/ma" />} />
             <Switch>
               <Route path='/ma' component={MerchantAccountPage} />
               <Route path='/orders' component={OrdersPage} />
-              <Route render={props => <Redirect to="/orders" />} />
+              <Route render={props => <Redirect to="/ma" />} />
             </Switch>
           </div>
         </div>
