@@ -30,12 +30,12 @@ const nav = [{
   children: [{
     type: 'link',
     path: '/crypto-all',
-    icon: 'orders_all_transactions',
+    icon: 'orders_crypto_all',
     title: 'All transactions'
   }, {
     type: 'link',
     path: '/crypto-payments',
-    icon: 'orders_payments',
+    icon: 'orders_crypto_payments',
     title: 'Payments'
   }]
 }]

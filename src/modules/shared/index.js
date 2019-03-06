@@ -7,6 +7,7 @@ import PaginationSlider from './pagination-slider/PaginationSlider';
 import Header from './header/Header';
 import Badge from './badge/Badge';
 import Notifications from './notifications/Notifications';
+import Dropdown from './dropdown/Dropdown';
 
 export {
   IconBase,
@@ -17,5 +18,6 @@ export {
   PaginationSlider,
   Header,
   Badge,
-  Notifications
+  Notifications,
+  Dropdown
 };

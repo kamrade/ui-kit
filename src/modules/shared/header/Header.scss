@@ -25,24 +25,9 @@
   }
 
   .tablet-menu-block {
-    padding-right: 20px;
+    padding-right: 10px;
     padding-left: 10px;
     display: none;
-
-    .tablet-menu-toggler {
-      padding: 5px;
-      @include transition($transition-base);
-      border-radius: $border-radius;
-
-      &:hover {
-        background-color: $gray-100;
-      }
-    }
-  }
-
-
-  .header-nav {
-
   }
 
   .logo-wrapper {
@@ -62,9 +47,10 @@
     color: $gray-600;
     padding: 20px 20px 20px;
     border-bottom: none;
+    // @include transition($transition-base);
 
     &:hover {
-      background-color: rgba($gray-100, .4);
+      background-color: rgba($gray-100, .25);
       text-decoration: none;
     }
     &.active {
@@ -79,25 +65,6 @@
     flex-grow: 2;
     display: flex;
     justify-content: flex-end;
-
-    // .notifications {
-    //   margin-right: 20px;
-    //   position: relative;
-    //   border-radius: $border-radius;
-    //   padding: 5px;
-    //
-    //   &:hover {
-    //     @include transition($transition-base);
-    //     background-color: $gray-100;
-    //   }
-    //
-    //   .notifications-badge {
-    //     position: relative;
-    //     bottom: 5px;
-    //     right: 5px;
-    //   }
-    //
-    // }
 
     .user-menu {
       border-radius: $border-radius;

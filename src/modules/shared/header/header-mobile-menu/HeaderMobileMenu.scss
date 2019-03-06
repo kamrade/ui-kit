@@ -1,0 +1,26 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.tablet-menu-toggler {
+  padding: 5px;
+  @include transition($transition-base);
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+}
+
+.mobile-sidebar-block {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  z-index: $zindex-dropdown;
+  background-color: $white;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.1);
+
+  .mobile-sidebar-toggler {
+    padding: 14px 10px 15px;
+  }
+
+}

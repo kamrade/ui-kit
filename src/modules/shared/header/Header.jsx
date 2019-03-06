@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import {IconBase, Notifications} from 'modules/shared';
+import HeaderMobileMenu from './header-mobile-menu/HeaderMobileMenu';
 
 import {cardpayLogo} from './cardpay-logo';
 import './Header.scss';
@@ -12,10 +13,9 @@ class Header extends Component {
       <div className='ui-header'>
 
         <div className="logo-wrapper">{cardpayLogo}</div>
+
         <div className="tablet-menu-block">
-          <div className="tablet-menu-toggler">
-            <IconBase iconName='all_services'/>{''}
-          </div>
+          <HeaderMobileMenu />
         </div>
 
         <NavLink className='header-link' to='/ma'>

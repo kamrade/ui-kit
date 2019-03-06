@@ -6,6 +6,7 @@
   position: relative;
   border-radius: $border-radius;
   padding: 5px;
+  padding-right: 10px;
 
   &:hover {
     @include transition($transition-base);
