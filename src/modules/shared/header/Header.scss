@@ -2,13 +2,57 @@
 @import "~assets/scss/bootstrap/_mixins";
 
 .ui-header {
-  padding-top: 10px;
+  position: relative;
   background-color: $white;
   margin-bottom: 20px;
   font-family: 'Montserrat';
   display: flex;
   padding-left: 240px;
   user-select: none;
+  display: flex;
+  align-items: baseline;
+
+  @include media-max-width(lg) {
+    padding-left: 0px;
+
+    .logo-wrapper {
+      display: none;
+    }
+
+    .tablet-menu-block {
+      display: block !important;
+    }
+  }
+
+  .tablet-menu-block {
+    padding-right: 20px;
+    padding-left: 10px;
+    display: none;
+
+    .tablet-menu-toggler {
+      padding: 5px;
+      @include transition($transition-base);
+      border-radius: $border-radius;
+
+      &:hover {
+        background-color: $gray-100;
+      }
+    }
+  }
+
+
+  .header-nav {
+
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 90px;
+
+  }
 
   .header-link {
     font-size: 14px;
@@ -16,16 +60,62 @@
     letter-spacing: 0.5px;
     line-height: 20px;
     color: $gray-600;
-    padding: 10px 20px 10px;
+    padding: 20px 20px 20px;
+    border-bottom: none;
 
     &:hover {
       background-color: rgba($gray-100, .4);
       text-decoration: none;
     }
     &.active {
-      background-color: $gray-100;
       color: $gray-900;
+      padding: 20px 20px 17px;
+      border-bottom: 3px solid $primary;
     }
   }
+
+  .user-area {
+    padding-right: 20px;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+
+    // .notifications {
+    //   margin-right: 20px;
+    //   position: relative;
+    //   border-radius: $border-radius;
+    //   padding: 5px;
+    //
+    //   &:hover {
+    //     @include transition($transition-base);
+    //     background-color: $gray-100;
+    //   }
+    //
+    //   .notifications-badge {
+    //     position: relative;
+    //     bottom: 5px;
+    //     right: 5px;
+    //   }
+    //
+    // }
+
+    .user-menu {
+      border-radius: $border-radius;
+      padding: 5px;
+      @include transition($transition-base);
+
+      &:hover {
+        background-color: $gray-100;
+      }
+    }
+
+    .username-text {
+      display: inline-block;
+      padding: 0 5px;
+    }
+
+  }
+
+
 
 }

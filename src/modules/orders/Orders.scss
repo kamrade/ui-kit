@@ -5,6 +5,12 @@
 .page-orders {
   display: flex;
 
+  .sidebar-block {
+    @include media-max-width(lg) {
+      display: none;
+    }
+  }
+
   .workspace {
     flex-grow: 5;
     background-color: $white;

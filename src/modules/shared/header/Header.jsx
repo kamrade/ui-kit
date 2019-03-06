@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import {IconBase, Notifications} from 'modules/shared';
 
+import {cardpayLogo} from './cardpay-logo';
 import './Header.scss';
 
 class Header extends Component {
@@ -9,6 +11,13 @@ class Header extends Component {
     return (
       <div className='ui-header'>
 
+        <div className="logo-wrapper">{cardpayLogo}</div>
+        <div className="tablet-menu-block">
+          <div className="tablet-menu-toggler">
+            <IconBase iconName='all_services'/>{''}
+          </div>
+        </div>
+
         <NavLink className='header-link' to='/ma'>
           <span className='app-title'>Merchant account</span>
         </NavLink>
@@ -16,6 +25,21 @@ class Header extends Component {
         <NavLink className='header-link' to='/orders'>
           <span className='app-title'>Orders</span>
         </NavLink>
+
+        <NavLink className='header-link' to='/analytics'>
+          <span className='app-title'>Analitycs</span>
+        </NavLink>
+
+        <div className="user-area">
+
+          <Notifications />
+
+          <div className="user-menu">
+            <IconBase iconName='user'/>{''}
+            <span className="username-text">Sheldon Cooper</span>{''}
+            <IconBase iconName='chevron_down_sm_21'/>{''}
+          </div>
+        </div>
 
       </div>
     );

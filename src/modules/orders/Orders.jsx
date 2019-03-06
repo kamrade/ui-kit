@@ -13,7 +13,9 @@ class Orders extends Component {
   render() {
     return (
       <div className="page-orders">
-        <Sidebar navElements={navElements} />
+        <div className="sidebar-block">
+          <Sidebar navElements={navElements} />
+        </div>
 
         <div className="workspace">
 

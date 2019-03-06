@@ -5,6 +5,7 @@ import './App.scss';
 
 import MerchantAccountPage from 'modules/ma/MerchantAccount';
 import OrdersPage from 'modules/orders/Orders';
+import AnalyticsPage from 'modules/analytics/Analytics';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Switch>
               <Route path='/ma' component={MerchantAccountPage} />
               <Route path='/orders' component={OrdersPage} />
+              <Route path='/analytics' component={AnalyticsPage} />
               <Route render={props => <Redirect to="/ma" />} />
             </Switch>
           </div>
