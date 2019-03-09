@@ -1,0 +1,70 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.ui-select {
+  position: relative;
+  padding-right: 40px;
+  user-select: none;
+  max-width: 320px;
+
+  &.active {
+    border-color: $primary !important;
+  }
+}
+
+.ui-select-icon {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+.ui-dropdown-list {
+  border-radius: $border-radius;
+  transform: translateY(5px);
+  position: absolute;
+  z-index: 2000;
+  padding: 10px 0;
+  background-color: $white;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+
+  &.is-loading {
+    height: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .ui-dropdown-loading-list-item {
+      height: 20px;
+      margin: 20px;
+      background-color: $gray-200;
+      background-color: $border-radius;
+      animation: loading 1s ease-in-out infinite;
+      border-radius: 10px;
+
+      &:first-of-type {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .ui-dropdown-item {
+    padding: 10px;
+    line-height: 20px;
+    transition: background .2s ease-in-out;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

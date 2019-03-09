@@ -8,6 +8,7 @@ import Header from './header/Header';
 import Badge from './badge/Badge';
 import Notifications from './notifications/Notifications';
 import Dropdown from './dropdown/Dropdown';
+import Select from './select/Select';
 
 export {
   IconBase,
@@ -19,5 +20,6 @@ export {
   Header,
   Badge,
   Notifications,
-  Dropdown
+  Dropdown,
+  Select
 };

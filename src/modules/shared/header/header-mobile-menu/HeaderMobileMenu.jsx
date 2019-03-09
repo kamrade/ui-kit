@@ -16,7 +16,6 @@ class HeaderMobilemenu extends Component {
   }
 
   handleClick() {
-    console.log(this.state.showDropdown);
     this.setState({
       showDropdown: !this.state.showDropdown
     })
