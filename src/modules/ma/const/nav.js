@@ -6,9 +6,9 @@ const nav = [
   title: 'Sandbox'
 }, {
   type: 'link',
-  path: '/ma/atoms',
+  path: '/ma/elements',
   icon: 'orders_payments',
-  title: 'Atoms'
+  title: 'Elements'
 }
 ];
 

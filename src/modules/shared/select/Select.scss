@@ -3,12 +3,21 @@
 
 .ui-select {
   position: relative;
+  padding: 9px 12px;
   padding-right: 40px;
   user-select: none;
+  line-height: 20px;
   max-width: 320px;
+  height: 40px;
+  font-family: $font-family-default;
 
   &.active {
     border-color: $primary !important;
+  }
+
+  .value-loading {
+    color: $gray-600;
+    font-style: italic;
   }
 }
 
@@ -16,6 +25,20 @@
   position: absolute;
   right: 10px;
   top: 9px;
+
+  &.is-loading {
+    opacity: 0.5;
+    animation: spin 4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
 
 .ui-dropdown-list {
@@ -26,6 +49,7 @@
   padding: 10px 0;
   background-color: $white;
   box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  font-family: $font-family-default;
 
   &.is-loading {
     height: 140px;

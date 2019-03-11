@@ -135,6 +135,12 @@ export const chevron_down_sm = (
   </svg>
 );
 
+export const chevron_down_xs = (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7 9L10 12L13 9" stroke="#1E222A" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 export const chevron_down_sm_21 = (
   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M5.5 9L10.5 14L15.5 9" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -201,5 +207,17 @@ export const orders_crypto_payments = (
   <path d="M6.10097 9H14.899C15.7411 9 16.2061 9.97708 15.6751 10.6306L11.2761 16.0448C10.8759 16.5373 10.1241 16.5373 9.72389 16.0448L5.32486 10.6306C4.79388 9.97708 5.25894 9 6.10097 9Z" fill="#ABB3C5"/>
   <rect x="13" y="5" width="9" height="5" rx="1" transform="rotate(90 13 5)" fill="#ABB3C5"/>
   </svg>
+);
 
+export const preloader = (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 2V5.2" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M10 14.8V18" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M4.34375 4.34399L6.60775 6.60799" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M13.3926 13.392L15.6566 15.656" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M2 10H5.2" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M14.7998 10H17.9998" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M4.34375 15.656L6.60775 13.392" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M13.3926 6.60799L15.6566 4.34399" stroke="#1E222A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
 );

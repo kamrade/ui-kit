@@ -6,7 +6,7 @@ import {Select} from 'modules/shared';
 const AtomsPage = () => (
   <div className='atoms-page'>
     <div className="p-5">
-      <h4>Atoms</h4>
+      <h4>Select Loader</h4>
       <Select></Select>
     </div>
   </div>

@@ -33,7 +33,7 @@ class Select extends Component {
       self.setState({
         isLoading: false
       });
-    }, 2000);
+    }, 1200);
 
     this.setState({
       showDropdown: !this.state.showDropdown,
@@ -57,9 +57,18 @@ class Select extends Component {
 
         <div ref={this.$select} onClick={this.toggleDropdown}
           className={`ui-select form-control ${this.state.showDropdown ? 'active' : ''}`}>
-          Currency
-          <div className="ui-select-icon">
-            <IconBase iconName='chevron_down'/>
+          { this.state.isLoading ? (
+            <span className="value-loading">Loading…</span>
+          ) : (
+            <span>Currency</span>
+          ) }
+          <div className={`ui-select-icon ${this.state.isLoading ? 'is-loading' : ''}`}>
+            { !this.state.isLoading &&
+              <IconBase iconName='chevron_down_xs'/>
+            }
+            { this.state.isLoading &&
+              <IconBase iconName='preloader'/>
+            }
           </div>
         </div>
 

@@ -2,6 +2,8 @@
 
 [ ] - Dialog modal
 [ ] - Confirmation modal
-[ ] - Dropdown
+[x] - Dropdown
 [ ] - Checklist, Multiselect
 [ ] - Tooltip
+[x] - Dropdown Content Loader
+[ ] - Heading for blocks
