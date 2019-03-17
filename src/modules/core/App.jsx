@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import {Header} from 'modules/shared';
+import AppNavigation from './AppNavigation';
 import './App.scss';
 
 import MerchantAccountPage from 'modules/ma/MerchantAccount';
@@ -12,17 +13,16 @@ class App extends Component {
     return (
 
         <div className="App">
-          <Header />
 
           <div className="current-application">
-            <Route exact path="/" render={props => <Redirect to="/ma" />} />
             <Switch>
+              <Route exact path='/' component={AppNavigation} />
               <Route path='/ma' component={MerchantAccountPage} />
               <Route path='/orders' component={OrdersPage} />
               <Route path='/analytics' component={AnalyticsPage} />
-              <Route render={props => <Redirect to="/ma" />} />
             </Switch>
           </div>
+
         </div>
 
     );

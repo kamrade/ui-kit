@@ -14,12 +14,12 @@ const nav = [{
     title: 'Payments'
   }, {
     type: 'link',
-    path: '/refunds',
+    path: '/orders/refunds',
     icon: 'orders_refunds',
     title: 'Refunds'
   }, {
     type: 'link',
-    path: '/payouts',
+    path: '/orders/payouts',
     icon: 'orders_payouts',
     title: 'Payouts'
   }]
@@ -29,12 +29,12 @@ const nav = [{
   collapse: false,
   children: [{
     type: 'link',
-    path: '/crypto-all',
+    path: '/orders/crypto-all',
     icon: 'orders_crypto_all',
     title: 'All transactions'
   }, {
     type: 'link',
-    path: '/crypto-payments',
+    path: '/orders/crypto-payments',
     icon: 'orders_crypto_payments',
     title: 'Payments'
   }]

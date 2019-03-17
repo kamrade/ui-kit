@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {IconBase, Notifications} from 'modules/shared';
 import HeaderMobileMenu from './header-mobile-menu/HeaderMobileMenu';
 
@@ -12,7 +12,9 @@ class Header extends Component {
     return (
       <div className='ui-header'>
 
-        <div className="logo-wrapper">{cardpayLogo}</div>
+        <Link to="/">
+          <div className="logo-wrapper">{cardpayLogo}</div>
+        </Link>
 
         <div className="tablet-menu-block">
           <HeaderMobileMenu />
