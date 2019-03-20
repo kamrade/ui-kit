@@ -1,0 +1,15 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.recurrence-details {
+  background-color: rgba($gray-100, .5);
+  padding: 0 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .recurrence-element-wrapper {
+    flex-grow: 2;
+    border-bottom: 1px solid $gray-200;
+    padding-left: 30px;
+  }
+}

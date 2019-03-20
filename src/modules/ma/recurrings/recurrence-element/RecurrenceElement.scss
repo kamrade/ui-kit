@@ -1,0 +1,28 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.recurrence-element {
+  padding: 10px 0;
+  margin: 10px 0;
+  padding-right: 10px;
+  border-right: 1px solid $gray-200;
+  margin-right: 10px;
+
+  &:last-of-type {
+    border-right: none;
+  }
+
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray-600;
+    font-weight: 600;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .value {
+
+  }
+
+}

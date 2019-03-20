@@ -1,0 +1,13 @@
+@import "~assets/scss/bootstrap/_variables";
+@import "~assets/scss/bootstrap/_mixins";
+
+.recurrings-page {
+  min-height: 1200px;
+  position: relative;
+
+  .page-heading {
+    padding: 20px 30px;
+    
+  }
+
+}
