@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import {Header} from 'modules/shared';
+import { Route, Switch } from 'react-router-dom';
 import AppNavigation from './AppNavigation';
 import './App.scss';
 

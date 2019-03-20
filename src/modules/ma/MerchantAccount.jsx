@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import {Header} from 'modules/shared';
 import {Sidebar} from 'modules/shared';
 import SandboxPage from './sandbox/SandboxPage';
+import RecurringsPage from './recurrings/RecurringsPage';
 import AtomsPage from './atoms/AtomsPage';
 
 import navElements from './const/nav';
@@ -23,6 +24,7 @@ class MerchantAccount extends Component {
             <Switch>
               <Route path="/ma/sandbox" component={SandboxPage}/>
               <Route path="/ma/elements" component={AtomsPage} />
+              <Route path="/ma/recurrings" component={RecurringsPage}/>
               <Route render={props => <Redirect to="/ma/sandbox" />} />
             </Switch>
           </div>

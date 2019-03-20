@@ -9,6 +9,12 @@ const nav = [
   path: '/ma/elements',
   icon: 'orders_payments',
   title: 'Elements'
+},
+{
+  type: 'link',
+  path: '/ma/recurrings',
+  icon: 'orders_payments',
+  title: 'Recurrings'
 }
 ];
 
