@@ -23,26 +23,26 @@ class RecurrenceDetails extends Component {
           title: 'Plan Name',
           value: 'Wery nice plan name'
         },
-        // {
-        //   name: 'subscribed at',
-        //   title: 'Subscribed at',
-        //   value: 'MAY 28, 2018'
-        // },
-        // {
-        //   name: 'amount',
-        //   title: 'Amount',
-        //   value: '100.00 USD'
-        // },
-        // {
-        //   name: 'recurrence',
-        //   title: 'Recurrence',
-        //   value: '1 month'
-        // },
-        // {
-        //   name: 'status',
-        //   title: 'Status',
-        //   value: 'Active'
-        // },
+        {
+          name: 'subscribed at',
+          title: 'Subscribed at',
+          value: 'MAY 28, 2018'
+        },
+        {
+          name: 'amount',
+          title: 'Amount',
+          value: '100.00 USD'
+        },
+        {
+          name: 'recurrence',
+          title: 'Recurrence',
+          value: '1 month'
+        },
+        {
+          name: 'status',
+          title: 'Status',
+          value: 'Active'
+        },
       ]
     };
   }

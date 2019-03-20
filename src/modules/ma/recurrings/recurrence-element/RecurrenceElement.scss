@@ -4,13 +4,8 @@
 .recurrence-element {
   padding: 10px 0;
   margin: 10px 0;
-  padding-right: 10px;
   border-right: 1px solid $gray-200;
-  margin-right: 10px;
-
-  &:last-of-type {
-    border-right: none;
-  }
+  padding-right: 30px;
 
   .title {
     text-transform: uppercase;

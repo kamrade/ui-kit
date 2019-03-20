@@ -11,5 +11,11 @@
     flex-grow: 2;
     border-bottom: 1px solid $gray-200;
     padding-left: 30px;
+
+    &:last-of-type {
+      .recurrence-element {
+        border-right: none;
+      }
+    }
   }
 }
