@@ -7,7 +7,13 @@ const AtomsPage = () => (
   <div className='atoms-page'>
     <div className="p-5">
       <h4>Select Loader</h4>
-      <Select></Select>
+      <Select />
+
+      <div className="mt-5">
+        <p className="base-text">Base text</p>
+        <p style={{ fontSize: '12px' }} className="base-text">Base text</p>
+      </div>
+
     </div>
   </div>
 );
