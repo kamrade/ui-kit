@@ -64,7 +64,7 @@ class Select extends Component {
           ) }
           <div className={`ui-select-icon ${this.state.isLoading ? 'is-loading' : ''}`}>
             { !this.state.isLoading &&
-              <IconBase iconName='chevron_down_xs'/>
+              <IconBase iconName='select_md20'/>
             }
             { this.state.isLoading &&
               <IconBase iconName='preloader'/>

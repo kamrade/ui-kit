@@ -14,18 +14,18 @@ const SandboxPage = () => (
       <h3>Buttons</h3>
       <UIButton theme='primary' size="lg">
         <span className="btn-icon btn-icon-left">
-          <IconBase iconName='download' color='inverted'/>
+          <IconBase iconName='download_md20' color='inverted'/>
         </span>
         <span>Test</span>
       </UIButton>{' '}
 
       <UIButton theme='light' size="lg">
-        <span className="btn-icon btn-icon-left"><IconBase iconName='xls_file'/></span>
+        <span className="btn-icon btn-icon-left"><IconBase iconName='xls_file_md20'/></span>
         <span className="btn-text">Download XLS</span>
       </UIButton>{' '}
 
       <UIButton theme='light' size="lg">
-        <span className="btn-icon btn-icon-left"><IconBase iconName='activity'/></span>
+        <span className="btn-icon btn-icon-left"><IconBase iconName='activity_md20'/></span>
         <span className="btn-text">Ballance Confirmation</span>
       </UIButton>{' '}
     </div>
@@ -33,7 +33,7 @@ const SandboxPage = () => (
     <div className="px-5 py-3">
 
       <UIButton theme='light' size='sm'>
-        <span className="btn-icon btn-icon-sm btn-icon-only"><IconBase iconName='download_sm'/></span>
+        <span className="btn-icon btn-icon-sm btn-icon-only"><IconBase iconName='download_sm16'/></span>
       </UIButton>{' '}
 
       <UIButton theme='light' size='sm'>
@@ -68,7 +68,7 @@ const SandboxPage = () => (
           <span className="btn-text">Large Button</span>
         </UIButton>
         <p>text</p>
-        <IconBase iconName='download'/>
+        <IconBase iconName='download_md20'/>
         <h3>Title</h3>
       </div>
     </div>

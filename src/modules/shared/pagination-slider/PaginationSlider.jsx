@@ -38,10 +38,10 @@ class PaginationSlider extends Component {
 
           <div className="button-controls">
             <UIButton theme='light' size='sm'>
-              <span className="btn-icon"><IconBase iconName='chevron_left_sm'/></span>
+              <span className="btn-icon"><IconBase iconName='chevron_left_sm16'/></span>
             </UIButton>
             <UIButton theme='light' size='sm'>
-              <span className="btn-icon"><IconBase iconName='chevron_right_sm'/></span>
+              <span className="btn-icon"><IconBase iconName='chevron_right_sm16'/></span>
             </UIButton>
           </div>
 

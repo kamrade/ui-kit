@@ -39,7 +39,7 @@ class Header extends Component {
           <div className="user-menu">
             <IconBase iconName='user'/>{''}
             <span className="username-text">Sheldon Cooper</span>{''}
-            <IconBase iconName='chevron_down_sm_21'/>{''}
+            <IconBase iconName='chevron_down_md20'/>{''}
           </div>
         </div>
 

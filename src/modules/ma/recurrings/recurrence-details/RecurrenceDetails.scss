@@ -3,18 +3,20 @@
 
 .recurrence-details {
   background-color: rgba($gray-100, .5);
-  padding: 0 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
+  border-top: 1px solid $gray-200;
+  overflow: hidden;
 
   .recurrence-element-wrapper {
-    flex-grow: 2;
+    flex-grow: 1;
     border-bottom: 1px solid $gray-200;
-    padding-left: 30px;
 
-    &:last-of-type {
+    &:first-of-type {
       .recurrence-element {
-        border-right: none;
+
       }
     }
   }
