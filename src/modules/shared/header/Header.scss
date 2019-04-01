@@ -5,12 +5,12 @@
   position: relative;
   background-color: $white;
   margin-bottom: 20px;
-  font-family: 'Montserrat';
   display: flex;
   padding-left: 240px;
   user-select: none;
   display: flex;
   align-items: baseline;
+  border-bottom: 1px solid $gray-200;
 
   @include media-max-width(lg) {
     padding-left: 0px;
@@ -32,20 +32,22 @@
 
   .logo-wrapper {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 50px;
-    width: 90px;
+    top: 20px;
+    left: 20px;
+    // height: 50px;
+    width: 75px;
 
   }
 
   .header-link {
+    font-family: 'Montserrat';
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 20px;
-    color: $gray-600;
-    padding: 20px 20px 20px;
+    color: $gray-900;
+    font-weight: 500;
+    padding: 25px 15px 24px;
     border-bottom: none;
     // @include transition($transition-base);
 
@@ -55,8 +57,12 @@
     }
     &.active {
       color: $gray-900;
-      padding: 20px 20px 17px;
-      border-bottom: 3px solid $primary;
+      padding: 25px 15px 22px;
+      border-bottom: 2px solid $primary;
+      &:hover {
+        background-color: $white;
+        text-decoration: none;
+      }
     }
   }
 
@@ -68,7 +74,8 @@
 
     .user-menu {
       border-radius: $border-radius;
-      padding: 5px;
+      padding: 10px;
+      cursor: pointer;
       @include transition($transition-base);
 
       &:hover {

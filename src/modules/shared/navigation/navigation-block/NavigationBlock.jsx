@@ -10,7 +10,7 @@ const NavigationBlock = (props) => (
     <NavLink className="d-block" to={props.path}>
       <div className="link-content">
         <div className="ui-navigation-block-icon"> <IconBase iconName={props.iconName} /> </div>
-        <p className="ui-navigation-block-text">{props.text}</p>
+        <div className="ui-navigation-block-text">{props.text}</div>
       </div>
     </NavLink>
   </div>

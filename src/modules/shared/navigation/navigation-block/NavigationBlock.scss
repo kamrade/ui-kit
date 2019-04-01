@@ -4,6 +4,7 @@
 $hover-color: darken($gray-100, 2%);
 
 .ui-navigation-block {
+  cursor: default;
   @include transition($transition-base);
 
   .link-content {
@@ -15,7 +16,6 @@ $hover-color: darken($gray-100, 2%);
   .ui-navigation-block-text {
     display: block;
     margin-left: $spacer/2;
-    cursor: default;
     margin-bottom: 0;
   }
 
